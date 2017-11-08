@@ -1,9 +1,9 @@
 
 <!-- 留言板  -->
-<view class='msgBox'>
+<view class='msgBox {{isShowBg}}'>
 
     <!-- 消息盒子  -->
-    <view class='msg-item' wx:for="{{msg}}">
+    <view class='msg-item color-{{index%10}}' wx:for="{{msg}}">
 
         <!-- 留言个人信息  -->
         <view class='msg-item-title'>
@@ -18,7 +18,7 @@
         
     </view>
 
-    <!-- 发表评论按钮  -->
+    <!-- 显示留言板  -->
     <view class='add-msg-btn {{isClose}}' bindtap='showCommentBoard'></view>
 
     <!-- 留言板填写框  -->
@@ -34,10 +34,13 @@
             </view>
 
             <!-- 留言提交按钮  -->
-            <button class='comment-publish'>立即留言</button>
+            <button class='comment-publish' hover-class='active'>听听你的声音</button>
         </view>
 
     </view>
+    
+    <!-- 加载下一页样式  -->
+    <view class='page-infinite-loading'>加载中...</view>
 
     <!-- 评论加载完毕显示  -->
     <view class='allLoaded'>

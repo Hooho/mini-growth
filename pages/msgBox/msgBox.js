@@ -22,9 +22,24 @@ Page({
                 text: "999999999"
         }, {
             text: "999999999"
-        }],
+            }, {
+                text: "999999999"
+        }, {
+            text: "999999999"
+            }, {
+                text: "999999999"
+        }, {
+            text: "999999999"
+            }, {
+                text: "999999999"
+        }, {
+            text: "999999999"
+            }, {
+                text: "999999999"
+            }],
         isClose:'',
-        isVisible:''
+        isVisible:'',
+        random:Math.random()
     },
 
     /**
@@ -54,6 +69,7 @@ Page({
     onHide: function () {
 
     },
+    
 
     /**
      * 生命周期函数--监听页面卸载
@@ -89,13 +105,15 @@ Page({
         if(isClose==''){
             this.setData({
                 isClose:"close",
-                isVisible:"visible"
+                isVisible: "visible",
+                isShowBg:"showBg"
             })
         }else{
 
             this.setData({
                 isClose: "",
-                isVisible:""
+                isVisible: "",
+                isShowBg:""
             })
         }
     }
