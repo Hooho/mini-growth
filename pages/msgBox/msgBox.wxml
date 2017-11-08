@@ -1,0 +1,47 @@
+
+<!-- 留言板  -->
+<view class='msgBox'>
+
+    <!-- 消息盒子  -->
+    <view class='msg-item' wx:for="{{msg}}">
+
+        <!-- 留言个人信息  -->
+        <view class='msg-item-title'>
+            <image scr="../../img/default_avatar.png"></image>
+            神仙朱
+        </view>
+
+        <!-- 留言内容  -->
+        <view class='msg-item-content'>
+            {{item.text}}
+        </view>
+        
+    </view>
+
+    <!-- 发表评论按钮  -->
+    <view class='add-msg-btn {{isClose}}' bindtap='showCommentBoard'></view>
+
+    <!-- 留言板填写框  -->
+    <view class='comment-board  {{isVisible}}'>
+
+        <!-- 留言背景  -->
+        <view class='comment-board-bg' bindtap='showCommentBoard'></view>
+        <view class='comment-board-dialog'>
+
+            <!-- 留言输入区域  -->
+            <view class='comment-board-textarea'>
+                <textarea fixed='true'></textarea>
+            </view>
+
+            <!-- 留言提交按钮  -->
+            <button class='comment-publish'>立即留言</button>
+        </view>
+
+    </view>
+
+    <!-- 评论加载完毕显示  -->
+    <view class='allLoaded'>
+        <p></p>我擦，我被你看完了<p></p>
+    </view>
+
+</view>
