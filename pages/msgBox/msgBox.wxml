@@ -7,7 +7,7 @@
 
         <!-- 留言个人信息  -->
         <view class='msg-item-title'>
-            <image scr="../../img/default_avatar.png"></image>
+            <image src='/img/default_avatar.png'></image>
             神仙朱
         </view>
 
@@ -30,20 +30,20 @@
 
             <!-- 留言输入区域  -->
             <view class='comment-board-textarea'>
-                <textarea fixed='true'></textarea>
+                <textarea fixed='true' bindinput='bindKeyInput'></textarea>
             </view>
 
             <!-- 留言提交按钮  -->
-            <button class='comment-publish' hover-class='active'>听听你的声音</button>
+            <button class='comment-publish' hover-class='active' bindtap='sendMsg'>听听你的声音</button>
         </view>
 
     </view>
     
     <!-- 加载下一页样式  -->
-    <view class='page-infinite-loading'>加载中...</view>
+    <view class='page-infinite-loading' hidden='loading'>加载中...</view>
 
     <!-- 评论加载完毕显示  -->
-    <view class='allLoaded'>
+    <view class='allLoaded'  hidden='allLoaded'>
         <p></p>我擦，我被你看完了<p></p>
     </view>
 

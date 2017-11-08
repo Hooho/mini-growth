@@ -52,10 +52,11 @@
 .msg-item-title{
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-flow: column;
+    justify-content: flex-start;
+    /* flex-flow: column; */
     padding: 20rpx 20rpx;
-    padding-top: 0;
+    padding-left: 0;
+    padding-top: 10rpx;
     font-size: 32rpx;
 }
 
@@ -63,11 +64,10 @@
     display:block;
     height:70rpx;
     width:70rpx;
-    margin-top:-35rpx;
-    background-color:#e6e6e6;
+    margin-top:-55rpx;
     border-radius:100%;
     overflow:hidden;
-    margin-bottom:7rpx;
+    margin-right:18rpx;
 
 }
 
@@ -75,7 +75,6 @@
     padding: 10rpx 20rpx;
     text-align: center;
 }
-
 
 /* 添加留言板  */
 .add-msg-btn{

@@ -6,7 +6,15 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        members:[{
+            name:"unclexiao",
+            avatar:"/img/avatar/uncle.jpg",
+            signature:"不负代码不负卿"
+        },{
+            name: "神仙朱",
+            avatar: "/img/avatar/hoho.jpg",
+            signature: "从来不认输"
+        }]
     },
 
     /**
