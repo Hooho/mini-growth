@@ -231,7 +231,7 @@ Page({
                 that.data.msg.unshift({ 
                     content: that.data.commentValue,
                     avatar:userInfo.avatarUrl,
-                    name: userInfo.nickName
+                    username: userInfo.nickName
                 });
 
                 // 发表成功之后滚到顶部

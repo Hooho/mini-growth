@@ -140,7 +140,7 @@
 }
 
 .comment-board-textarea{
-    height: 120rpx;
+    height: 180rpx;
     border: 1rpx solid #32B9A2;
     border-radius: 10rpx;
     overflow: hidden;

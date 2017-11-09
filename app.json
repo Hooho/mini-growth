@@ -1,5 +1,6 @@
 {
-	"pages":["pages/home/home","pages/msgBox/msgBox","pages/about/about"],
+	"pages":["pages/home/home","pages/msgBox/msgBox","pages/about/about",
+        "pages/home-inside/list/list","pages/home-inside/article/article"],
 	"window":{
         "navigationBarTextStyle":"white",
         "navigationBarBackgroundColor":"#35C3AA"

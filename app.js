@@ -14,7 +14,9 @@ App({
                 that.userInfo=res.userInfo
             },
             fail: res => {
-
+                that.userInfo={
+                    userName:"匿名用户"
+                }
             }
         })
 

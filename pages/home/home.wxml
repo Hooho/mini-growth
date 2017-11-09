@@ -1,0 +1,24 @@
+
+<view class="home-page">
+
+    <view class='home-page-title'><image src='/img/happy.png' class='happy-icon'></image> 来学习啊大兄弟</view>
+
+    <view class='tabs-list flex'>
+
+        <!-- 文章链接  -->
+        <navigator class='tab-item' wx:for="{{tabs}}" url="/pages/home-inside/list/list?name={{item.url}}">
+
+           <view class='tab-item-container'>
+
+                <view class="tab-item-icon iconfont {{item.icon}}"></view>
+
+                <view class='tab-item-text'>
+                    {{item.text}}
+                </view>
+
+            </view>
+        </navigator>   
+    </view>
+
+
+</view>
