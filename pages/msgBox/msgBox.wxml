@@ -1,36 +1,35 @@
 
 <!-- 留言板  -->
-<view class='msgBox {{isShowBg}}'>
+<view class='msgBox {{isShowBg?"showBg":""}}'>
 
     <!-- 消息盒子  -->
     <view class='msg-item color-{{index%10}}' wx:for="{{msg}}">
 
         <!-- 留言个人信息  -->
         <view class='msg-item-title'>
-            <image src='/img/default_avatar.png'></image>
-            神仙朱
+            <image src="{{item.avatar||'/img/default_avatar.png'}}"></image>
+            {{item.username||"匿名用户"}} 
         </view>
 
         <!-- 留言内容  -->
         <view class='msg-item-content'>
-            {{item.text}}
+            {{item.content}}
         </view>
         
     </view>
 
-    <!-- 显示留言板  -->
-    <view class='add-msg-btn {{isClose}}' bindtap='showCommentBoard'></view>
-
     <!-- 留言板填写框  -->
-    <view class='comment-board  {{isVisible}}'>
+    <view class='comment-board  {{isVisible?"visible":""}}'>
 
         <!-- 留言背景  -->
-        <view class='comment-board-bg' bindtap='showCommentBoard'></view>
+        <view class='comment-board-bg' bindtap='CommentBoardToggle'></view>
         <view class='comment-board-dialog'>
 
             <!-- 留言输入区域  -->
             <view class='comment-board-textarea'>
-                <textarea fixed='true' bindinput='bindKeyInput'></textarea>
+                <textarea fixed='true' bindinput='bindKeyInput' value='{{commentValue}}'
+                          placeholder='相顾无言，请给我留言'>
+                </textarea>
             </view>
 
             <!-- 留言提交按钮  -->
@@ -39,12 +38,21 @@
 
     </view>
     
+    <!-- 显示留言板  -->
+    <view class='add-msg-btn {{isClose?"close":""}}' bindtap='CommentBoardToggle'></view>
+    
     <!-- 加载下一页样式  -->
-    <view class='page-infinite-loading' hidden='loading'>加载中...</view>
+    <view class='page-infinite-loading' hidden='{{!loading}}'>加载中...</view>
 
     <!-- 评论加载完毕显示  -->
-    <view class='allLoaded'  hidden='allLoaded'>
+    <view class='allLoaded flex ag-center j-center'  hidden='{{!allLoaded}}'>
         <p></p>我擦，我被你看完了<p></p>
+    </view>
+
+    <!-- 当前没有评论  -->
+    <view class='no-comments  flex ag-center j-center' hidden='{{msg.length!=0}}'> 
+        <image src='/img/sad.png'></image>
+        当前没有任何留言 
     </view>
 
 </view>
