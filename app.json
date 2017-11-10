@@ -1,6 +1,12 @@
 {
-	"pages":["pages/home/home","pages/msgBox/msgBox","pages/about/about",
-        "pages/home-inside/list/list","pages/home-inside/article/article"],
+	"pages":[
+        "pages/home/home","pages/msgBox/msgBox",
+        "pages/about/about",
+        "pages/home-inside/list/list",
+        "pages/home-inside/article/article",
+        "pages/home-inside/markdown/markdown",
+        "pages/home-inside/panel/panel"
+    ],
 	"window":{
         "navigationBarTextStyle":"white",
         "navigationBarBackgroundColor":"#35C3AA"

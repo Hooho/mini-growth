@@ -6,14 +6,22 @@ Page({
      * 页面的初始数据
      */
     data: {
-        members:[{
+        members:[ {
+            name: "Phodal",
+            avatar: "/img/avatar/Phodal.jpg",
+            signature: "待我代码编成，请你为妻可好"
+        },{
             name:"unclexiao",
             avatar:"/img/avatar/uncle.jpg",
-            signature:"不负代码不负卿"
+            signature:"爱代码爱生活，不负代码不负卿"
         },{
             name: "神仙朱",
             avatar: "/img/avatar/hoho.jpg",
-            signature: "从来不认输"
+            signature: "不辜负自己，哪里会认输"
+        }, {
+            name: "甘国豪",
+            avatar: "/img/avatar/hao.jpg",
+            signature: "饭前饭后一根烟，快活似神仙"
         }]
     },
 

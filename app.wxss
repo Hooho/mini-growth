@@ -45,3 +45,81 @@
 .icon-dushuhui:before { content: "\e601"; }
 
 .icon-zhihu:before { content: "\e617"; }
+
+
+/* 链接  */
+
+.g-cell{
+    display: block;
+    position: relative;
+    background-color: #fff;
+    min-height: 130rpx;
+    color: #333333;
+    overflow: hidden;
+    border-bottom: 1rpx solid #eee;
+}
+.g-cell:last-child{
+    /* border-bottom: none */
+}
+.g-cell.border{
+     border-bottom: 2px solid #E6E6E6;
+}     
+ /* 链接背景 */
+.g-cell-mask:after,.g-cell.active {
+    background-color: #eee;
+}
+ /* 链接容器 */
+.g-cell-wrapper{
+    
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: inherit;
+    padding: 0 45rpx;
+
+}
+ /* 链接左边内容部分 */
+.g-cell-title{
+    flex: 1
+}
+ /* 链接文字部分 */
+.g-cell-text{
+     vertical-align: middle;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     white-space: nowrap;
+     width: 75%;
+     
+} 
+ /* 链接备注内容 */
+.g-cell-label{
+    color: #888;
+    display: block;
+    font-size: 24rpx;
+    margin-top: 12rpx;
+}  
+ /* 链接右部分 */
+.g-cell-value{
+    color: #888;
+    display: flex;
+    align-items: center;
+    font-size: 36rpx;
+}
+.g-cell-value.is-link{
+    margin-right: 68rpx;
+}
+
+/*  链接箭头 */
+.g-cell-arrow-right:after{
+    content: " ";
+    position: absolute;
+    top: 50%;
+    right: 40rpx;
+    border: 2rpx solid #c8c8cd;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    width: 20rpx;
+    height: 20rpx;
+    transform: translateY(-50%) rotate(45deg);
+}
+       

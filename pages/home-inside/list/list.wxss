@@ -1,0 +1,8 @@
+
+
+.part-title{
+    background-color: #ebebeb;
+    color: #999;
+    padding: 24rpx;
+    font-size: 36rpx;
+}
