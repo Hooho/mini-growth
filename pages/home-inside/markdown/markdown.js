@@ -1,6 +1,9 @@
 
 
 let req = require("../../../common/request.js");
+let WxParse = require('../../../common/wxParse/wxParse.js')
+
+
 let app=getApp()
 Page({
 
@@ -8,7 +11,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+      textContent:''
   },
 
   /**
@@ -16,7 +19,40 @@ Page({
    */
   onLoad: function (options) {
 
-      
+      let that = this;
+
+      try {
+
+            var detail = wx.getStorageSync('page-options');
+
+            wx.showLoading();
+
+            // 请求获取 md 资源文件，detail 是一个 路径
+            wx.request({
+                url: detail.source +detail.path,
+                method: "GET",
+                data: {},
+                complete() {
+                    wx.hideLoading();
+                },
+                success: function (res) {
+
+                    // that.setData({
+                    //     textContent:res.data
+                    // })
+                    
+                    WxParse.wxParse('article', 'md', res, that, 5);
+                },
+                fail: function (err) {
+                    console.error('wx.request error:' + route);
+                }
+            });
+            
+
+      } catch (e) {
+
+      }
+
       const title = options.subTitle + app.pages[options.name]
 
       this.setData({

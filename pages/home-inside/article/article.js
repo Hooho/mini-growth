@@ -1,7 +1,6 @@
 
 
 let req = require("../../../common/request.js");
-let WxParse = require('../../../common/wxParse/wxParse.js')
 
 const app = getApp()
 
@@ -11,7 +10,7 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        list:[]
     },
 
     /**
@@ -24,11 +23,10 @@ Page({
 
         try {
 
-            const detail = wx.getStorageSync('options');
+            var detail = wx.getStorageSync('page-options');
+            this.setData({ list: detail });
 
-            req.send('articles/' + detail, 'GET', {}, function (res) {
-                WxParse.wxParse('article', 'md', res, that, 5);
-            })
+            console.log('page-options', detail)
 
         } catch (e) {
         }
@@ -42,9 +40,6 @@ Page({
         wx.setNavigationBarTitle({
             title: title 
         })
-
-        // 获取 subTitle，并拼接完整 title 作为分享 title
-        this.setFullTitle(options.name, options.subTitle); 
     },
 
     /**

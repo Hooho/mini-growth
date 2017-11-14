@@ -1,0 +1,25 @@
+
+
+<view class="time-line-page">
+
+    <view class='timeline-item clearBoth' wx:for="{{list}}">
+
+        <view class='timeline-icon'>
+            {{item.section}}
+        </view>
+    
+        <view class='timeline-content'>
+
+            <!-- <view class='timeline-content-header'>
+                {{item.section}}
+            </view> -->
+
+            <rich-text class='timeline-content-section' nodes="{{item.description}}"></rich-text>
+
+
+        </view>
+    
+    
+    </view>
+
+</view>

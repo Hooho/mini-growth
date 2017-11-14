@@ -25,9 +25,9 @@
     transform: translateY(-50%) rotate(135deg);
     transform-origin: center center;
 }
-.part-title.hidden{
+.part-title.visible{
     border-color: transparent;
 }
-.part-title.hidden::after{
+.part-title.visible::after{
      transform: translateY(-50%) rotate(-45deg);
 }

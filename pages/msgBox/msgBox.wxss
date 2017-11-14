@@ -21,6 +21,7 @@
     color: #fff;
     background-color:#30B099;
     transition: 0.5s;
+    overflow: visible
 }
 .msg-item.color-0{
     background-color: #7E7D5B
@@ -61,6 +62,7 @@
     padding-left: 0;
     padding-top: 10rpx;
     font-size: 32rpx;
+    overflow: visible
 }
 
 .msg-item-title image{

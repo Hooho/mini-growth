@@ -11,10 +11,11 @@
      <!-- 练手项目，有一级菜单 ，内容是链接列表  -->
      <block  wx:if="{{menu=='project'}}" >
         <view class='part-hasTitle'  wx:for="{{list}}">
+
             <view class='part-title {{ (item.visible||(item.visible===undefined && index==0))?"visible":""}}' 
-                  bindtap='showContent' data-index="{{index}}" >{{item.name}}</view>
-              <!-- {{!(item.visible===undefined && index==0)||!item.visible}} -->
-            <view class='list-content' hidden="{{ !(item.visible||(item.hivisibledden===undefined && index==0)) }}" >
+                  bindtap='showContent' data-index="{{index}}"  >{{item.name}}</view>
+                  
+            <view class='list-content' hidden="{{ !(item.visible||(item.visible===undefined && index==0)) }}" >
                 <template is="cell" data="{{list:item.subdomains,i:index}}" />
             </view>
 
@@ -29,7 +30,7 @@
 </view>
 
 <template name="cell">
-    <view class='g-cell' wx:for="{{list}}" bindtap='clickHandler' data-i="{{i}}" data-j="{{index}}" data-title="{{item.name||item.title}}"  hover-class='active'>
+    <view class='g-cell' wx:for="{{list}}" bindtap='clickHandler' data-i="{{i}}" data-j="{{index}}"  data-title="{{item.name||item.title}}"  hover-class='active'>
         <view class='g-cell-wrapper'>
             <view class='g-cell-title'>
                 <view class='g-cell-text'>{{item.name||item.title}}</view>

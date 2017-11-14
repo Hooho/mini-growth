@@ -33,11 +33,15 @@ Page({
     req.send(menu,"GET",{},res=>{
 
         console.log(res)
-
-        that.setData({
+        
+        let obj = {
             list: res.content,
             menu: menu
-        })
+        };
+
+        res.source && (obj.source = res.source);
+
+        that.setData(obj)
 
     },err=>{
 
@@ -136,14 +140,26 @@ function getOptions(dataset) {
         j = dataset.j;
 
     switch (this.data.menu) {
+        
+        // 学习路线
         case 'awesome':
-            obj = list[index].timeline;
+            obj = list[j].timeline;
             break;
+
+        // 练手项目
         case 'project':
             obj = list[i].subdomains[j].projects;
             break;
+
+        // 工具箱，在线文章，-
         default:
-            obj = list[index].path;
+            obj.path= list[j].path;
     }
+
+    // 如果存在基本路径，就传递基本路径
+    if(this.data.source) {
+        obj.source=this.data.source;
+    }
+
     return obj;
 }

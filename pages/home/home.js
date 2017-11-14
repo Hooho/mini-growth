@@ -22,15 +22,17 @@ Page({
             icon: "icon-read",
             text: '文章精选',
             url: "articles"
-        }, {
-            icon: "icon-kaoshi",
-            text: '技能测验',
-            url: "test"
-        }, {
-            icon: "icon-dushuhui",
-            text: '读书路线',
-            url: "read"
-        }]
+        }
+        // , {
+        //     icon: "icon-kaoshi",
+        //     text: '技能测验',
+        //     url: "test"
+        // }, {
+        //     icon: "icon-dushuhui",
+        //     text: '读书路线',
+        //     url: "read"
+        // }
+        ]
     },
 
     /**
