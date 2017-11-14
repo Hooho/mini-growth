@@ -5,7 +5,6 @@ let WxParse = require('../../../common/wxParse/wxParse.js')
 
 const app = getApp()
 
-
 Page({
 
     /**

@@ -123,3 +123,22 @@
     transform: translateY(-50%) rotate(45deg);
 }
        
+
+/*  超出省略  */
+.text-hidden{
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.line-content{
+    font-size: 32rpx;
+    color: #999;
+}
+.line{
+    height: 2rpx;
+    width: 140rpx;
+    background-color: #999;
+    margin: 0 20rpx;
+}

@@ -11,8 +11,7 @@ Page({
    */
   data: {
     list:[],
-    menu:"",
-    showIndex:""
+    menu:""
   },
 
   /**
@@ -27,6 +26,8 @@ Page({
     wx.setNavigationBarTitle({
         title: app.pages[menu]
     })
+
+    console.log(menu, app.pages[menu])
 
     // 获取内容列表
     req.send(menu,"GET",{},res=>{
@@ -64,28 +65,44 @@ Page({
   },
   
   showContent(e){
+    
+      const index = e.currentTarget.dataset.index;
+      let param={};
+
+      if (index == 0 && typeof this.data.list[index].visible==="undefined"){
+          this.data.list[index].visible=true
+      }
+
+      param["list[" + index + "].visible"] = !this.data.list[index].visible
       
-      this.setData({
-          showIndex: e.currentTarget.dataset.index
-      })
+      this.setData(param)
+      
+      console.log(e.currentTarget.dataset.index)
+          
   },
 
   clickHandler: function (e) {
       
-      let menu = this.data.menu
+      let menu = this.data.menu;
+      const that=this;
+
       // 传递 subTitle 作为详情页 title 一部分
       let subTitle = e.currentTarget.dataset.title
 
+      console.log(e.currentTarget.dataset)
+
       try {
-          //参数无法传递参数，故而使用本地存储 
-          wx.setStorageSync('options', getOptions(e.currentTarget.dataset));
+
+          //参数无法传递参数，故而使用本地同步存储 
+          wx.setStorageSync('page-options', getOptions.call(this,e.currentTarget.dataset));
+
       } catch (e) {
 
       }
 
-    //  跳链接
+      //  跳链接
       wx.navigateTo({
-          url: getNavigateUrl(app.pages[menu])+ '?name=' + menu + '&subTitle=' + subTitle
+          url: getNavigateUrl(menu)+ '?name=' + menu + '&subTitle=' + subTitle
       });
   }
 
@@ -96,7 +113,7 @@ function getNavigateUrl(name) {
     var url = '';
 
     switch (name) {
-        case 'timeline':
+        case 'awesome':
             url = '/pages/home-inside/article/article';
             break;
         case 'project':
@@ -108,4 +125,25 @@ function getNavigateUrl(name) {
 
     return url;
 
+}
+
+// 获取到相应点击列表的子数据，然后保存起来
+function getOptions(dataset) {
+
+    var obj = {}, list = this.data.list;
+    var index = dataset.index,
+        i = dataset.i,
+        j = dataset.j;
+
+    switch (this.data.menu) {
+        case 'awesome':
+            obj = list[index].timeline;
+            break;
+        case 'project':
+            obj = list[i].subdomains[j].projects;
+            break;
+        default:
+            obj = list[index].path;
+    }
+    return obj;
 }

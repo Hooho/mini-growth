@@ -1,17 +1,27 @@
 
 <!-- 列表页  -->
 <view class='list-page'>
+
+    <!-- 
+        练手项目是复制链接  
+        学习路线是 从上页面传数据
+        工具箱是，在线文章 获取 md 并解析       
+    -->
      
+     <!-- 练手项目，有一级菜单 ，内容是链接列表  -->
      <block  wx:if="{{menu=='project'}}" >
         <view class='part-hasTitle'  wx:for="{{list}}">
-            <view class='part-title' 
-                  bindtap='showContent' data-index="{{index}}">{{item.name}}</view>           
-            <view class='list-content' wx:show="{{index==showIndex}}">
-                <template is="cell" data="{{list:list.subdomains}}" />
+            <view class='part-title {{ (item.visible||(item.visible===undefined && index==0))?"visible":""}}' 
+                  bindtap='showContent' data-index="{{index}}" >{{item.name}}</view>
+              <!-- {{!(item.visible===undefined && index==0)||!item.visible}} -->
+            <view class='list-content' hidden="{{ !(item.visible||(item.hivisibledden===undefined && index==0)) }}" >
+                <template is="cell" data="{{list:item.subdomains,i:index}}" />
             </view>
+
         </view>
      </block>
      
+    <!--  学习路线，高效工具，文章精选，直接是链接列表-->
     <block wx:if="{{menu!='project'}}">
        <template is="cell" data="{{list:list}}" />
     </block>    
@@ -19,7 +29,7 @@
 </view>
 
 <template name="cell">
-    <view class='g-cell' hover-class='active' wx:for="{{list}}" bindtap='clickHandler' data-title="{{item.name||item.title}}">
+    <view class='g-cell' wx:for="{{list}}" bindtap='clickHandler' data-i="{{i}}" data-j="{{index}}" data-title="{{item.name||item.title}}"  hover-class='active'>
         <view class='g-cell-wrapper'>
             <view class='g-cell-title'>
                 <view class='g-cell-text'>{{item.name||item.title}}</view>

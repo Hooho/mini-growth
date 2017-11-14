@@ -1,0 +1,10 @@
+
+
+<view class='panel-page'>
+    <view class='flex ag-center j-center line-content'> <view class='line'></view> 长按可以复制链接 <view class='line'></view></view>
+    <view class='link-item' wx:for="{{list}}" bindlongtap='setClipboardData' data-url="{{item.link}}">
+        <view class='link-item-header'>{{item.name}}</view>
+        <view class='link-item-description'>{{item.desc}}</view>
+        <view class='link-item-url text-hidden'>{{item.link}}</view>
+    </view>
+</view>
