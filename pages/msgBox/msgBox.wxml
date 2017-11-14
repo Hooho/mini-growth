@@ -52,7 +52,7 @@
     <!-- 当前没有评论  -->
     <view class='no-comments  flex ag-center j-center' hidden='{{msg.length!=0}}'> 
         <image src='/img/sad.png'></image>
-        当前没有任何留言 
+        什么鬼都没有，给我留个言吧兄弟 
     </view>
 
 </view>

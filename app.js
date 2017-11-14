@@ -63,5 +63,13 @@ App({
     },
 
     COMMONURL:"https://leancloud.cn/1.1/classes/",  // 请求公用URL
-    userInfo:null
+    userInfo:null,
+    pages:{
+        awesome: "学习路线",
+        project: "练手项目",
+        toolbox: "高效工具",
+        articles: "文章精选",
+        test: "技能测验",
+        read: "读书路线",
+    }
 })

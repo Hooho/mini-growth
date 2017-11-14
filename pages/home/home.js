@@ -37,7 +37,16 @@ Page({
      * 用户点击右上角分享
      */
     onShareAppMessage() {
-        
+        return {
+            title: "学习首页",
+            path: '/pages/home/home',
+            success: function (res) {
+                // 分享成功
+            },
+            fail: function (res) {
+                // 分享失败
+            }
+        }
     },
 
     // 跳页 data-url，可以在dataset中访问url

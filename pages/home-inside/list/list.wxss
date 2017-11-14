@@ -1,0 +1,33 @@
+
+
+.part-title{
+    position: relative;
+    background-color: #ebebeb;
+    color: #999;
+    padding: 24rpx 40rpx;
+    font-size: 36rpx;
+    border-bottom: 1rpx solid #ddd
+}
+.part-hasTitle:last-child .part-title{
+    border-bottom: none
+}
+
+.part-title::after{
+    content: " ";
+    position: absolute;
+    top: 50%;
+    right: 40rpx;
+    border: 2rpx solid #c8c8cd;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    width: 20rpx;
+    height: 20rpx;
+    transform: translateY(-50%) rotate(135deg);
+    transform-origin: center center;
+}
+.part-title.hidden{
+    border-color: transparent;
+}
+.part-title.hidden::after{
+     transform: translateY(-50%) rotate(-45deg);
+}

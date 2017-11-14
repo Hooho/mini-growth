@@ -56,8 +56,8 @@ Page({
      */
     onShareAppMessage() {
         return {
-            title: '陪你成为顶尖开发者',
-            path: '/pages/about/about',
+            title: '开发吐槽基地',
+            path: '/pages/msgBox/msgBox',
             success: function (res) {
                 // 分享成功
             },

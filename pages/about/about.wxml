@@ -3,9 +3,11 @@
 <view class='about-page'>
 
   <!-- 团队信息  -->
-  <view class='part-title'>团队成员</view>
+  <view class='part-title flex j-center ag-center'>
+        <view class='line'></view>团队成员<view class='line'></view>
+   </view>
   <view class='team-info'>
-        <view class='member-item' wx:for="{{members}}">
+        <view class='member-item' wx:for="{{members}}" bindtap='showQRcode' data-person="{{index}}">
             <image src='{{item.avatar}}' class='member-avatar'></image>
             <text class='member-name'>{{item.name}}</text>
             <text class='member-sign'>{{item.signature}}</text>
@@ -13,21 +15,19 @@
   </view>
 
   <!-- 联系方式  -->
-  <view class='part-title'>加入我们</view>
+  <view class='part-title  flex j-center ag-center'>
+    <view class='line'></view>加入我们<view class='line'></view>
+  </view>
   <view class='link-info'>
-    <view class='link-item'>
-        <text>公众号</text>
-        <text>Phodal</text>
-    </view>
-    <view class='link-item'>
+    <view class='link-item'  bindlongtap="setClipboardData" data-clip="529600495" data-cliptype="QQ群号">
         <text>QQ群</text>
         <text>529600495</text>
     </view>
-    <view class='link-item'>
+    <view class='link-item' bindlongtap="setClipboardData"  data-clip="http://forum.growth.ren" data-cliptype="论坛网址">
         <text>论坛</text>
         <text>http://forum.growth.ren</text>
     </view>
-    <view class='link-item'>
+    <view class='link-item' bindlongtap="setClipboardData"  data-clip="http://growth.ren" data-cliptype="官网网址">
         <text>官网</text>
         <text>http://growth.ren</text>
     </view>

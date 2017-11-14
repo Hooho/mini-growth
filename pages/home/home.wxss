@@ -10,8 +10,19 @@
 .happy-icon{
     width: 80rpx;
     height: 80rpx;
-    margin: 20rpx
+    margin: 20rpx;
+	animation: change 2s infinite ease-in-out alternate;
 }
+@keyframes change{
+    from{
+        transform: scale(1)
+    }
+    to{
+        transform: scale(0.9)
+    }
+}
+
+
 .tabs-list{
 
     flex-flow: wrap
@@ -37,7 +48,7 @@
     justify-content: center;
     height: 160rpx;
     width:100%;   
-    font-size: 70rpx;
+    font-size: 85rpx;
     background-image: linear-gradient(to right , #5ad2bd 0% ,#30B099 100%);
     color: #fff;
 }

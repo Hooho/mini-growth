@@ -1,7 +1,10 @@
 
 <view class="home-page">
 
-    <view class='home-page-title'><image src='/img/happy.png' class='happy-icon'></image> 来学习啊大兄弟</view>
+    <view class='home-page-title'>
+        <image src='/img/happy.png' class='happy-icon'></image> 
+        来学习啊大兄弟
+    </view>
 
     <view class='tabs-list flex'>
 
