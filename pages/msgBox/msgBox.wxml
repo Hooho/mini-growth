@@ -28,7 +28,7 @@
             <!-- 留言输入区域  -->
             <view class='comment-board-textarea'>
                 <textarea fixed='true' bindinput='bindKeyInput' value='{{commentValue}}'
-                          placeholder='相顾无言，请给我留言'>
+                          placeholder='相顾无言，请给我留言\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n'>
                 </textarea>
             </view>
 

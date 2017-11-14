@@ -26,6 +26,8 @@ Page({
             mask: true
         });
 
+        console.log("----\n","/n------------")
+
         this.getComments(1)
 
     },
