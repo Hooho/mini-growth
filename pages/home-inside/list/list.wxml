@@ -1,7 +1,6 @@
 
 <!-- 列表页  -->
 <view class='list-page'>
-
     <!-- 
         练手项目是复制链接  
         学习路线是 从上页面传数据
@@ -25,7 +24,11 @@
     <!--  学习路线，高效工具，文章精选，直接是链接列表-->
     <block wx:if="{{menu!='project'}}">
        <template is="cell" data="{{list:list}}" />
-    </block>    
+    </block>   
+
+    <view wx:if="isErr" class='err-tip  flex ag-center j-center'>
+         <image src='/img/sad.png'></image> 发生错误了呢...
+    </view>
 
 </view>
 

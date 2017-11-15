@@ -1,4 +1,8 @@
 
+.home-page{
+    
+    overflow: visible;
+}
 .home-page-title{
     display: flex;
     justify-content: center;
@@ -11,21 +15,12 @@
     width: 80rpx;
     height: 80rpx;
     margin: 20rpx;
-	animation: change 2s infinite ease-in-out alternate;
+	animation: changeScale 2s infinite ease-in-out alternate;
 }
-@keyframes change{
-    from{
-        transform: scale(1)
-    }
-    to{
-        transform: scale(0.9)
-    }
-}
-
-
 .tabs-list{
 
-    flex-flow: wrap
+    flex-flow: wrap;
+    overflow: visible;
 }
 .tab-item{
     width:50%;

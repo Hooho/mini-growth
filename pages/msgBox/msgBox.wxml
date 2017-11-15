@@ -15,6 +15,8 @@
         <view class='msg-item-content'>
             {{item.content}}
         </view>
+
+        <view class='msg-time'>{{item.createdAt}}</view>
         
     </view>
 
@@ -28,7 +30,7 @@
             <!-- 留言输入区域  -->
             <view class='comment-board-textarea'>
                 <textarea fixed='true' bindinput='bindKeyInput' value='{{commentValue}}'
-                          placeholder='相顾无言，请给我留言\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n'>
+                          placeholder='相顾无言，请给我留言.......\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n'>
                 </textarea>
             </view>
 
@@ -39,7 +41,7 @@
     </view>
     
     <!-- 显示留言板  -->
-    <view class='add-msg-btn {{isClose?"close":""}}' bindtap='CommentBoardToggle'></view>
+    <view class='add-msg-btn-wrap'><view class='add-msg-btn {{isClose?"close":""}}' bindtap='CommentBoardToggle'></view></view>
     
     <!-- 加载下一页样式  -->
     <view class='page-infinite-loading' hidden='{{!loading}}'>加载中...</view>
@@ -50,7 +52,7 @@
     </view>
 
     <!-- 当前没有评论  -->
-    <view class='no-comments  flex ag-center j-center' hidden='{{msg.length!=0}}'> 
+    <view class='err-tip  flex ag-center j-center' hidden='{{msg.length!=0}}'> 
         <image src='/img/sad.png'></image>
         什么鬼都没有，给我留个言吧兄弟 
     </view>

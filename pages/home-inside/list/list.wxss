@@ -1,5 +1,14 @@
 
+.list-page{
+    min-height: 100vh;
+    background-color: #ebebeb;
+}
 
+.isErr{
+    color: #999;
+    text-align: center;
+    padding-top: 100rpx;
+}
 .part-title{
     position: relative;
     background-color: #ebebeb;

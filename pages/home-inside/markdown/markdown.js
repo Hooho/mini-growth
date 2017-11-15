@@ -12,7 +12,8 @@ Page({
    */
   data: {
       textContent:'',
-      article:""
+      article:"",
+      isErr:false
   },
 
   /**
@@ -46,6 +47,9 @@ Page({
                     WxParse.wxParse('article', 'md', res.data, that, 5);
                 },
                 fail: function (err) {
+                    that.setData({
+                        isErr:true
+                    })
                     console.error('wx.request error:' + route);
                 }
             });

@@ -11,7 +11,8 @@ Page({
    */
   data: {
     list:[],
-    menu:""
+    menu:"",
+    isErr:false
   },
 
   /**
@@ -45,6 +46,10 @@ Page({
 
     },err=>{
 
+        that.setData({
+            isErr:true
+        })
+        console.log("发生了错误",err,)
     })
 
   },

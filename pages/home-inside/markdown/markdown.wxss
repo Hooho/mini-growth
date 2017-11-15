@@ -8,6 +8,7 @@
 .wxParse-blockquote{
     padding: 20rpx;
     padding-left: 30rpx;
+    border-left:10rpx solid #dbdbdb;
 }
 .wxParse-p{
     margin: 15rpx 0
@@ -16,4 +17,7 @@
     display: block;
     padding: 10rpx;
     padding-left: 15rpx;
+}
+.wxParse-pre{
+    margin: 15rpx 0;
 }

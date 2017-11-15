@@ -150,3 +150,29 @@
     width: 100%;
     clear: both;
 }
+
+
+/* 出现错误时提示  */
+.err-tip{
+    color: #9FA3A6;
+    text-align: center;
+    padding-top: 300rpx;
+    font-size: 32rpx;
+}
+
+.err-tip image{
+    height: 60rpx;
+    width: 60rpx;
+    margin-right: 20rpx;
+}
+
+/* 变大变小  */
+@keyframes changeScale{
+    from{
+        transform: scale(1)
+    }
+    to{
+        transform: scale(0.9)
+    }
+}
+

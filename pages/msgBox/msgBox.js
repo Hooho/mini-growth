@@ -227,13 +227,16 @@ Page({
             },
             success(res) {
 
-                wx.showToast({ title:"留言成功" })
+                wx.showToast({ title:"留言成功" });
+
+                let date = new Date();
 
                 // 立即推送进数组里面
                 that.data.msg.unshift({ 
                     content: that.data.commentValue,
                     avatar:userInfo.avatarUrl,
-                    username: userInfo.nickName
+                    username: userInfo.nickName,
+                    createdAt: date
                 });
 
                 // 发表成功之后滚到顶部
