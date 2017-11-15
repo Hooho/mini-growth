@@ -1,0 +1,19 @@
+.markdown-page{
+    padding: 40rpx;
+    font-size: 34rpx;
+    line-height: 1.7;
+    word-spacing:4rpx;
+}
+
+.wxParse-blockquote{
+    padding: 20rpx;
+    padding-left: 30rpx;
+}
+.wxParse-p{
+    margin: 15rpx 0
+}
+.wxParse-code,.wxParse-wxxxcode-style{
+    display: block;
+    padding: 10rpx;
+    padding-left: 15rpx;
+}
