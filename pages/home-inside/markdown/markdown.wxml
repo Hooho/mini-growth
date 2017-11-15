@@ -925,6 +925,6 @@
 
 </template>
 
- <template is="wxParse" data="{{wxParseData:article.nodes}}" /> 
+<template is="wxParse" data="{{wxParseData:article.nodes}}" /> 
 
 <!-- <rich-text nodes="{{textContent}}"></rich-text> -->

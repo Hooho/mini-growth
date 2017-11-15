@@ -11,7 +11,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-      textContent:''
+      textContent:'',
+      article:""
   },
 
   /**
@@ -41,7 +42,8 @@ Page({
                     //     textContent:res.data
                     // })
                     
-                    WxParse.wxParse('article', 'md', res, that, 5);
+                    // 解析 md 资源文件
+                    WxParse.wxParse('article', 'md', res.data, that, 5);
                 },
                 fail: function (err) {
                     console.error('wx.request error:' + route);
