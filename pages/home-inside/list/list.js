@@ -33,7 +33,7 @@ Page({
     // 获取内容列表
     req.send(menu,"GET",{},res=>{
 
-        console.log(res)
+        //console.log(res)
         
         let obj = {
             list: res.content,
@@ -49,7 +49,7 @@ Page({
         that.setData({
             isErr:true
         })
-        console.log("发生了错误",err,)
+        console.log("发生了错误---->",err)
     })
 
   },

@@ -16,11 +16,13 @@ function request(route, method, data, success, fail) {
         complete(){
             wx.hideLoading();
         },
-        success: function (res) {
+        success (res) {
 
             typeof success == 'function' && success.call(this, res.data)
         },
-        fail: function (err) {
+        fail (err) {
+
+            typeof fail == 'function' && fail.call(this, err)
             console.error('wx.request error:' + route);
         }
     });

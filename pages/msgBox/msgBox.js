@@ -1,6 +1,8 @@
 
 
 let app = getApp();
+let util= require("../../common/util.js")
+
 Page({
 
     /**
@@ -113,6 +115,10 @@ Page({
                 let results = res.data.results;
                 let len=results.length;
                 let pageData=that.data;
+
+                results.forEach((item)=>{
+                    item.createdAt = util.formatTime(item.createdAt)
+                })
 
 
                 // 判断是否存在下一页
@@ -229,14 +235,12 @@ Page({
 
                 wx.showToast({ title:"留言成功" });
 
-                let date = new Date();
-
                 // 立即推送进数组里面
                 that.data.msg.unshift({ 
                     content: that.data.commentValue,
                     avatar:userInfo.avatarUrl,
                     username: userInfo.nickName,
-                    createdAt: date
+                    createdAt: util.formatTime(new Date())
                 });
 
                 // 发表成功之后滚到顶部

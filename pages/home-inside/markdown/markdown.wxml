@@ -41,7 +41,7 @@
         <template is="wxParse0" data="{{item}}" />
     </block> 
 
-    <view class='err-tip'> 
+    <view class='err-tip' wx:if="{{isErr}}"> 
         <image src='/img/sad.png'></image>
         获取文章出错，但我不背锅...
     </view>

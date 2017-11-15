@@ -26,7 +26,7 @@
        <template is="cell" data="{{list:list}}" />
     </block>   
 
-    <view wx:if="isErr" class='err-tip  flex ag-center j-center'>
+    <view  wx:if="{{isErr}}" class='err-tip  flex ag-center j-center'>
          <image src='/img/sad.png'></image> 发生错误了呢...
     </view>
 

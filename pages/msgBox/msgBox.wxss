@@ -14,7 +14,7 @@
 .msg-item{
     position: relative;
     border-radius: 10rpx;
-    box-shadow: 0 0 20rpx rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 30rpx rgba(0, 0, 0, 0.4);
     margin: 0 30rpx;
     margin-top: 50rpx;
     min-height: 220rpx;
@@ -78,16 +78,24 @@
 }
 
 .msg-item-content{
-    padding: 10rpx 20rpx;
+    padding: 10rpx 40rpx;
     padding-top: 30rpx;
     text-align: center;
 }
 .msg-time{
-    position: absolute;
-    right: 15rpx;
-    bottom: 10rpx;
-    color: #fff;
-    font-size: 30rpx;
+   position:absolute;
+    right:0;
+    bottom:0;
+    color:#eee;
+    font-size:30rpx;
+    background:rgba(255, 255, 255, 0.2);
+    height:40rpx;
+    line-height:40rpx;
+    padding:0 20rpx;
+    border-top-left-radius: 10rpx;
+    border-bottom-right-radius: 10rpx;
+    box-shadow: -3rpx -3rpx 5rpx rgba(0, 0, 0, 0.2);
+
 }
 
 .add-msg-btn-wrap{
