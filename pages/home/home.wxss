@@ -44,8 +44,20 @@
     height: 160rpx;
     width:100%;   
     font-size: 85rpx;
-    background-image: linear-gradient(to right , #5ad2bd 0% ,#30B099 100%);
+    background-image: linear-gradient(to right , #35C3AA 0% ,#5ad2bd 100%);
     color: #fff;
+}
+.tab-item:nth-child(2) .tab-item-icon{
+    
+    background-image: linear-gradient(to right , #5ad2bd 0% ,#6ad7c4 100%);
+}
+.tab-item:nth-child(3) .tab-item-icon{
+    
+    background-image: linear-gradient(to right , #6ad7c4 0% ,#7bdbca 100%);
+}
+.tab-item:last-child .tab-item-icon{
+    
+    background-image: linear-gradient(to right , #7bdbca 0% ,#8ce0d1 100%);
 }
 .tab-item-text{
     font-size: 36rpx;
