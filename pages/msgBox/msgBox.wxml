@@ -41,7 +41,7 @@
     </view>
     
     <!-- 显示留言板  -->
-    <view class='add-msg-btn-wrap'><view class='add-msg-btn {{isClose?"close":""}}' bindtap='CommentBoardToggle'></view></view>
+    <view class='add-msg-btn-wrap  {{isClose?"close":""}}'><view class='add-msg-btn' bindtap='CommentBoardToggle'></view></view>
     
     <!-- 加载下一页样式  -->
     <view class='page-infinite-loading' hidden='{{!loading}}'>加载中...</view>
