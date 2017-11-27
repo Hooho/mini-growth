@@ -9,6 +9,9 @@
     height: 100vh;
     overflow: hidden
 }
+.msgBox.nogradient .msg-item{
+    background-image: none;
+}
 
 /* 留言板 信息  */
 .msg-item{
@@ -19,40 +22,71 @@
     margin-top: 50rpx;
     min-height: 220rpx;
     color: #fff;
-    background-color:#30B099;
+    /*30B099  64D2BE*/
+    background-image: linear-gradient(to right , #30B099 0% ,#64D2BE 100%);
     transition: 0.5s;
     overflow: visible;
     padding-bottom: 50rpx;
 }
+/*  */
 .msg-item.color-0{
-    background-color: #7E7D5B
+    background-color: #7E7D5B;
+    /*7E7D5B  */
+    background-image: linear-gradient(to right , #7E7D5B 0% ,#DEB887 100%);
 }
+/*  */
 .msg-item.color-1{
-    background-color: #7BB3CA
+    background-color: #7BB3CA;
+    /*7BB3CA  */
+    background-image: linear-gradient(to right , #7BB3CA 0% ,#E1C26E 100%);
 }
+/*  */
 .msg-item.color-2{
-    background-color: #CDAE51
+    background-color: #CDAE51;
+    /*CDAE51  */
+    background-image: linear-gradient(to right , #CDAE51 0% ,#EF9E9D  100%);
 }
+/*  */
 .msg-item.color-3{
-    background-color: #C89EC2
+    background-color: #C89EC2;
+    /*C89EC2  */
+    background-image: linear-gradient(to right , #C89EC2 0% ,#F08080 100%);
 }
+/*  */
 .msg-item.color-4{
-    background-color: #CD9074
+    background-color: #CD9074;
+    /*CD9074  */
+    background-image: linear-gradient(to right , #CD9074 0% ,#64D2BE 100%);
 }
+/*  */
 .msg-item.color-5{
-    background-color: #788A9C
+    background-color: #788A9C;
+    /*788A9C  */
+    background-image: linear-gradient(to right , #788A9C 0% ,#E1A588 100%);
 }
+/*  */
 .msg-item.color-6{
-    background-color: #60AE98
+    background-color: #60AE98;
+    /*60AE98  EF9E9D*/ 
+    background-image: linear-gradient(to right , #60AE98 0% ,#EF9E9D 100%);
 }
+/*  */
 .msg-item.color-7{
-    background-color: #323232
+    background-color: #323232;
+    /*323232  74C2AC*/
+    background-image: linear-gradient(to right , #FFA07A 0% ,#74C2AC 100%);
 }  
+/*  */
 .msg-item.color-8{
-    background-color: #DA8A89
+    background-color: #DA8A89;
+    /*DA8A89  */
+    background-image: linear-gradient(to right , #F08080 0% ,#EF9E9D 100%);
 }
+/*  */
 .msg-item.color-9{
-    background-color: #9FB15C
+    background-color: #9FB15C;
+    /*9FB15C  */
+    background-image: linear-gradient(to right , #F4A460 0% ,#B3C570 100%);
 }
 .msg-item-title{
     display: flex;
@@ -91,10 +125,11 @@
     background:rgba(255, 255, 255, 0.2);
     height:40rpx;
     line-height:40rpx;
-    padding:0 20rpx;
-    border-top-left-radius: 10rpx;
+    padding:0 30rpx;
+    border-top-left-radius: 100rpx;
     border-bottom-right-radius: 10rpx;
     box-shadow: -3rpx -3rpx 5rpx rgba(0, 0, 0, 0.2);
+
 
 }
 

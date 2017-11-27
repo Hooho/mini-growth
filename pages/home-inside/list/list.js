@@ -95,15 +95,19 @@ Page({
       let menu = this.data.menu;
       const that=this;
 
-      // 传递 subTitle 作为详情页 title 一部分
-      let subTitle = e.currentTarget.dataset.title
+      console.log("menu--------------->",menu)
 
-      console.log(e.currentTarget.dataset)
+      // 传递 subTitle 作为详情页 title 一部分
+      let dataset = e.currentTarget.dataset
+      let subTitle = dataset.title
+      
+      dataset.menu=menu
+      console.log(dataset)
 
       try {
 
           //参数无法传递参数，故而使用本地同步存储 
-          wx.setStorageSync('page-options', getOptions.call(this,e.currentTarget.dataset));
+          wx.setStorageSync('page-options', getOptions.call(this, dataset));
 
       } catch (e) {
 
@@ -160,6 +164,8 @@ function getOptions(dataset) {
         default:
             obj.path= list[j].path;
     }
+
+    obj.menu=dataset.menu // 传递菜单名字
 
     // 如果存在基本路径，就传递基本路径
     if(this.data.source) {

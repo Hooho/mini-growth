@@ -3,6 +3,7 @@
     font-size: 34rpx;
     line-height: 1.7;
     word-spacing:4rpx;
+    color:#444444;
 }
 
 .wxParse-blockquote{

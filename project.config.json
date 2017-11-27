@@ -28,6 +28,12 @@
 					"name": "留言板",
 					"pathName": "pages/msgBox/msgBox",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "列表页",
+					"pathName": "pages/list/list",
+					"query": ""
 				}
 			]
 		}
