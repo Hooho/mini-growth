@@ -59,10 +59,11 @@ Page({
 
       }
 
-      const title = options.subTitle + app.pages[options.name]
+      const title = options.subTitle + app.pages[options.menu]
 
       this.setData({
-          title: title
+          title: title,
+          options: options
       })
 
       wx.setNavigationBarTitle({
@@ -75,9 +76,10 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
+      var detail = wx.getStorageSync('page-options');
       return {
           title: this.data.title,
-          path: '/pages/home-inside/markdown/markdown?name=project',
+          path: '/pages/home-inside/list/list?menu=' + detail.menu,
           success: function (res) {
               // 分享成功
           },

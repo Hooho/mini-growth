@@ -16,6 +16,7 @@ Page({
         loading:false, // 留言是否正在加载下一页标识符
         allLoaded:false, // 留言是否全部加载标识符
         commentValue:'', // 留言内容
+        pulled:true,// 停止下拉
         page:1 // 当前页数
     },
 
@@ -38,10 +39,16 @@ Page({
      * 页面相关事件处理函数--监听用户下拉动作
      */
     onPullDownRefresh() {
-
+        let that=this;
+        this.setData({
+            pulled:false
+        })
         // 刷新数据
         this.getComments(1, function () {
             wx.stopPullDownRefresh()
+            that.setData({
+                pulled: true
+            })
         })  
     },
 

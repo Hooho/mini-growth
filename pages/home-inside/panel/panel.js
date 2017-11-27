@@ -17,7 +17,7 @@ Page({
     onLoad: function (options) {
 
 
-        const title = options.subTitle+"-" + app.pages[options.name]
+        const title = options.subTitle + "-" + app.pages[options.menu]
 
         try {
 
@@ -44,7 +44,7 @@ Page({
     onShareAppMessage: function () {
         return {
             title: this.data.title,
-            path: '/pages/home-inside/panel/panel?name=project',
+            path: '/pages/home-inside/list/list?menu=project',
             success: function (res) {
                 // 分享成功
             },

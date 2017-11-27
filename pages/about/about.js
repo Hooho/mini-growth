@@ -41,7 +41,7 @@ Page({
      */
     onShareAppMessage: function () {
         return {
-            title: "Growth团队",
+            title: "开发者团队",
             path: '/pages/about/about',
             success: function (res) {
                 // 分享成功

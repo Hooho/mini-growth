@@ -31,7 +31,7 @@ Page({
         } catch (e) {
         }
 
-        const title = options.subTitle + app.pages[options.name]
+        const title = options.subTitle + app.pages[options.menu]
 
         this.setData({
             title: title
@@ -48,7 +48,7 @@ Page({
     onShareAppMessage: function () {
         return {
             title: this.data.title,
-            path: '/pages/home-inside/article/article?name=project',
+            path: '/pages/home-inside/list/list?menu=awesome',
             success: function (res) {
                 // 分享成功
             },

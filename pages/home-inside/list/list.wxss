@@ -1,7 +1,7 @@
 
 .list-page{
     min-height: 100vh;
-    background-color: #ebebeb;
+    background-color: #efefef;
 }
 
 .isErr{

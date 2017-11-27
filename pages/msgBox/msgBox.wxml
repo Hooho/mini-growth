@@ -2,6 +2,9 @@
 <!-- 留言板  -->
 <view class='msgBox {{isShowBg?"showBg":""}}'>
 
+    <!-- 提示  -->
+    <!-- <view class='msg-smart'hidden='{{pulled}}'>杀马特乡村炫彩</view> -->
+
     <!-- 消息盒子  -->
     <view class='msg-item color-{{index%10}}' wx:for="{{msg}}">
 

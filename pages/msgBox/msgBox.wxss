@@ -12,6 +12,12 @@
 .msgBox.nogradient .msg-item{
     background-image: none;
 }
+.msg-smart{
+    text-align: center;
+    font-size: 36rpx;
+    color: #666;
+    padding-top: 30rpx
+}
 
 /* 留言板 信息  */
 .msg-item{

@@ -20,8 +20,10 @@ Page({
    */
   onLoad(options) {
     
-    const menu=options.name;
+    const menu = options.menu;
     const that=this;
+
+    console.log(options)
 
     // 动态设置标题内容
     wx.setNavigationBarTitle({
@@ -63,7 +65,7 @@ Page({
 
       return {
           title: app.pages[menuu],
-          path: '/pages/home-inside/list/list?name=' + menu,
+          path: '/pages/home-inside/list/list?menu=' + menu,
           success: function (res) {
               // 分享成功
           },
@@ -73,6 +75,7 @@ Page({
       }
   },
   
+  //  展开收缩内容
   showContent(e){
     
       const index = e.currentTarget.dataset.index;
@@ -90,6 +93,7 @@ Page({
           
   },
 
+  // 点击跳转链接 
   clickHandler: function (e) {
       
       let menu = this.data.menu;
@@ -100,14 +104,17 @@ Page({
       // 传递 subTitle 作为详情页 title 一部分
       let dataset = e.currentTarget.dataset
       let subTitle = dataset.title
+      let options;
       
       dataset.menu=menu
+
+      options = getOptions.call(this, dataset)
       console.log(dataset)
 
       try {
 
           //参数无法传递参数，故而使用本地同步存储 
-          wx.setStorageSync('page-options', getOptions.call(this, dataset));
+          wx.setStorageSync('page-options', options);
 
       } catch (e) {
 
@@ -115,12 +122,13 @@ Page({
 
       //  跳链接
       wx.navigateTo({
-          url: getNavigateUrl(menu)+ '?name=' + menu + '&subTitle=' + subTitle
+          url: getNavigateUrl(menu) + '?menu=' + menu + '&subTitle=' + subTitle
       });
   }
 
 })
 
+// 获取到跳转的子页面路径
 function getNavigateUrl(name) {
 
     var url = '';

@@ -56,7 +56,7 @@
     background-color: #fff;
     border-radius: 10rpx;
     overflow: hidden;
-    box-shadow: 0 0 40rpx #35C3AA;
+    box-shadow: 0 0 40rpx #999;
 }
 
 .timeline-content-header{

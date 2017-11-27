@@ -57,7 +57,7 @@ Page({
         var url = e.currentTarget.dataset.url;
         
         wx.navigateTo({
-            url: '/pages/home-inside/list/list?name=' + url
+            url: '/pages/home-inside/list/list?menu=' + url
         });
     }
 })
