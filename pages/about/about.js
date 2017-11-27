@@ -1,8 +1,10 @@
 
 
 const qrImgs = [
-      
-     ]
+    'http://www.unclexiao.com/cdn/mini-growth/QR/Phodal.jpg',
+    'http://www.unclexiao.com/cdn/mini-growth/QR/unclexiao.jpg',
+    'http://www.unclexiao.com/cdn/mini-growth/QR/zhu.jpg'
+]
 
 Page({
 
@@ -86,7 +88,8 @@ Page({
         }
 
         wx.previewImage({
-            current:url
+            current:url,
+            urls: qrImgs
         })
     }
 })
