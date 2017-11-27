@@ -31,7 +31,7 @@ Page({
 
             // 请求获取 md 资源文件，detail 是一个 路径
             wx.request({
-                url: detail.source +detail.path,
+              url: 'https://www.unclexiao.com/cdn/slash/articles/' + detail.path.replace('.md','.txt'),
                 method: "GET",
                 data: {},
                 complete() {
