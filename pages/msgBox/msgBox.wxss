@@ -80,7 +80,7 @@
 .msg-item.color-8{
     background-color: #DA8A89;
     /*DA8A89  */
-    background-image: linear-gradient(to right , #F08080 0% ,#EF9E9D 100%);
+    background-image: linear-gradient(to right , #7BB3CA 0% ,#EF9E9D 100%);
 }
 /*  */
 .msg-item.color-9{
