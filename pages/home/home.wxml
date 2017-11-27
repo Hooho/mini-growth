@@ -9,7 +9,7 @@
     <view class='tabs-list flex'>
 
         <!-- 文章链接  -->
-        <navigator class='tab-item' wx:for="{{tabs}}" url="/pages/home-inside/list/list?name={{item.url}}">
+        <navigator class='tab-item' wx:for="{{tabs}}" url="/pages/home-inside/list/list?name={{item.url}}" wx:key="url">
 
            <view class='tab-item-container'>
 

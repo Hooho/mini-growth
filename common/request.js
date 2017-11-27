@@ -1,16 +1,10 @@
 
-// 配置环境：本地、开发、生产
-function getServerUrl(route) {
-
-    return `http://www.unclexiao.com/cdn/slash/${route}`;
-}
-
 function request(route, method, data, success, fail) {
 
     wx.showLoading();
 
     wx.request({
-        url: "https://phodal.coding.me/growth/" + route+"/api/all.json",
+        url: "https://www.unclexiao.com/cdn/slash/" + route+"/api/all.json",
         method: "GET",
         data: data,
         complete(){
