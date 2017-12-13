@@ -25,7 +25,7 @@
       },
       {
         "pagePath": "pages/msgBox/msgBox",
-        "text": "留言板",
+        "text": "梦想感言",
         "iconPath": "img/tab/msg.png",
         "selectedIconPath": "img/tab/msg_selected.png"
       },

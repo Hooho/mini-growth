@@ -60,22 +60,6 @@ Page({
         this.getComments(this.data.page) // 获取下一页
     },
 
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage() {
-        return {
-            title: '开发吐槽基地',
-            path: '/pages/msgBox/msgBox',
-            success: function (res) {
-                // 分享成功
-            },
-            fail: function (res) {
-                // 分享失败
-            }
-        }
-    },
-
     // 获取留言
     getComments(page,callback){
 
