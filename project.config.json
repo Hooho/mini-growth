@@ -10,7 +10,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "1.6.4",
 	"appid": "wxfa49352d435840e7",
-	"projectname": "mini-growth",
+	"projectname": "min-growth",
 	"condition": {
 		"search": {
 			"current": -1,
