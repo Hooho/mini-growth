@@ -87,8 +87,8 @@ Page({
             dataType: "json",
             header: {
                 'content-type': 'application/json', // 默认值
-                "x-avoscloud-application-id": "7NfsdVB4XJUS00dpSUUjqQ6B-gzGzoHsz",
-                "x-avoscloud-application-key": "3sNgjgMOvPIekwHcoyx9QQLr"
+                "x-avoscloud-application-id":"xxxx", // 个人LearnCloud验证字段
+                "x-avoscloud-application-key":"xxx" // 个人LearnCloud验证字段
             },
             complete() {
 
